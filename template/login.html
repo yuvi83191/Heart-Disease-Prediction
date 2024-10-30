@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+         background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #007BFF; 
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input[type="text"], 
+        input[type="password"] {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 2rem;
+            font-size: 16px;
+        }
+
+   
+        button {
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+
+        p {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="flex justify-between w-11/12 mx-auto">
+    <img src="https://vidhilegalpolicy.in/wp-content/uploads/2021/10/mental-health-wellness-during-covid-19.jpg" class="w-[40vw] h-[50vh]"/>
+   
+    <div class="w-[40vw]  container">
+        <h2 class="font-bold text-[2rem] underline mb-[2rem]">Login</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="rounded-md mx-auto px-[1.2rem] font-semibold py-[0.7rem] w-[10rem] bg-green-400 text-white">Login</button>
+        </form>
+        <p class="mt-5">Don't have an account? <a href="{% url 'register' %}" class="text-blue-400  italic">Register here</a></p>
+    </div> 
+</body>
+</html>

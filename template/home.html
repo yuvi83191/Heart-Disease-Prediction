@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+   <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: beige;
+        }
+
+        .container {
+            background-color: white;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #34495e;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            
+            padding: 15px 30px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        .btn-secondary {
+            background-color: #3498db;
+        }
+
+        .btn-secondary:hover {
+            background-color: #2980b9;
+        }
+
+        @media (max-width: 768px) {
+           
+            h1 {
+                font-size: 2rem;
+            }
+
+            .btn {
+              
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="w-[100vh] h-[100vh]">
+   <div class=" w-[90vw] ml-[5vw] overflow-hidden mx-auto h-full justify-center  flex flex-column md:flex-row items-center justify-between ">
+    
+    <div class="container  w-[38vw] p-[4rem]" > 
+        <h1 class="font-bold text-[3rem] w-full">Heart Disease Predictor</h1>
+        <p class="italic mt-[2.5rem]">"Empower Your Health: Predict, Prevent, Prosper!"</p>
+     <div class="flex mt-[2.5rem] ml-[3rem] gap-[5vw]">
+        <a href="{% url 'login' %}" class="btn">Login</a>
+        <a href="{% url 'register' %}" class="btn btn-secondary">Register</a>
+</div>  </div>
+<img class="rounded-lg object-fit  h-[75vh] w-[40vw]" src="https://hbr.org/resources/images/article_assets/2019/10/Oct19_22_1032609198.jpg"/>
+</div>
+</body>
+</html>
