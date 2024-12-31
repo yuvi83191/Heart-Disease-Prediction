@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            margin: 0;
+            background-color: #f0f0f0; /* Optional background color */
+            font-family: Arial, sans-serif; /* Font style */
+        }
+        h2 {
+            color: purple; /* Purple color for the User Registered text */
+        }
+        p {
+            font-size: 1.2em; /* Slightly larger font for the paragraph */
+        }
+        .button {
+            margin-top: 20px; /* Space above the button */
+            padding: 10px 20px; /* Padding for button */
+            font-size: 1em; /* Font size for button text */
+            color: white; /* Text color */
+            background-color: purple; /* Button background color */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+        .button:hover {
+            background-color: darkviolet; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>User Registered!</h2>
+        <p>Your user details have been successfully registered!</p>
+        <a href="{% url 'prediction_form' %}" class="btn">Register</a>  <!-- Link to Register page -->
+        <a href="{% url 'history' %}" class="btn">History</a>  <!-- Link to History page -->
+    </div>
+</body>
+</html>

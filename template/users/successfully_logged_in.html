@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: flex-start; /* Align container to the left */
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('https://images.healthshots.com/healthshots/en/uploads/2023/10/12155254/medical-tourism-1600x900.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: white; /* White background for the container */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-left: 30px;
+            text-align: center;
+        }
+
+        h2 {
+            color: black; /* Black color for the Welcome text */
+        }
+
+        p {
+            margin: 10px 0;
+            color: black; /* Black color for the paragraph text */
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #007BFF; /* Blue button */
+            color: white; /* White text */
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0 10px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white; /* White text */
+            background-color: #007BFF; /* Blue button background */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome!</h2>
+        <p>You have successfully logged in.</p>
+        <!-- Buttons for Register and History -->
+        <div class="btn-group">
+            <a href="{% url 'prediction_form' %}" class="btn">Register</a>  <!-- Link to Register page -->
+            <a href="{% url 'history' %}" class="btn">History</a>  <!-- Link to History page -->
+        </div>
+    </div>
+</body>
+</html>
